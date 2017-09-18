@@ -17,14 +17,14 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.1
  * 
  */
-@WebServiceClient(name = "CalculadoraService", targetNamespace = "http://pos.ifpb.edu.br/", wsdlLocation = "http://localhost:8080/pos-soap-server/CalculadoraService?wsdl")
+@WebServiceClient(name = "CalculadoraService", targetNamespace = "http://ws.pos.ifpb.edu.br/", wsdlLocation = "http://localhost:8080/pos-soap-server/CalculadoraService?wsdl")
 public class CalculadoraService
     extends Service
 {
 
     private final static URL CALCULADORASERVICE_WSDL_LOCATION;
     private final static WebServiceException CALCULADORASERVICE_EXCEPTION;
-    private final static QName CALCULADORASERVICE_QNAME = new QName("http://pos.ifpb.edu.br/", "CalculadoraService");
+    private final static QName CALCULADORASERVICE_QNAME = new QName("http://ws.pos.ifpb.edu.br/", "CalculadoraService");
 
     static {
         URL url = null;
@@ -53,7 +53,7 @@ public class CalculadoraService
      */
     @WebEndpoint(name = "CalculadoraPort")
     public Calculadora getCalculadoraPort() {
-        return super.getPort(new QName("http://pos.ifpb.edu.br/", "CalculadoraPort"), Calculadora.class);
+        return super.getPort(new QName("http://ws.pos.ifpb.edu.br/", "CalculadoraPort"), Calculadora.class);
     }
 
     /**
@@ -65,7 +65,7 @@ public class CalculadoraService
      */
     @WebEndpoint(name = "CalculadoraPort")
     public Calculadora getCalculadoraPort(WebServiceFeature... features) {
-        return super.getPort(new QName("http://pos.ifpb.edu.br/", "CalculadoraPort"), Calculadora.class, features);
+        return super.getPort(new QName("http://ws.pos.ifpb.edu.br/", "CalculadoraPort"), Calculadora.class, features);
     }
 
     private static URL __getWsdlLocation() {

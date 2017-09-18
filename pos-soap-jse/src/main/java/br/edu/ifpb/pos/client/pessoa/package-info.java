@@ -1,2 +1,2 @@
-@javax.xml.bind.annotation.XmlSchema(namespace = "http://pos.ifpb.edu.br/")
+@javax.xml.bind.annotation.XmlSchema(namespace = "http://ws.pos.ifpb.edu.br/")
 package br.edu.ifpb.pos.client.pessoa;

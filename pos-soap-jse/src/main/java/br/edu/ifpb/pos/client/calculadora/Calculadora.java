@@ -17,7 +17,7 @@ import javax.xml.ws.ResponseWrapper;
  * Generated source version: 2.1
  * 
  */
-@WebService(name = "Calculadora", targetNamespace = "http://pos.ifpb.edu.br/")
+@WebService(name = "Calculadora", targetNamespace = "http://ws.pos.ifpb.edu.br/")
 @XmlSeeAlso({
     ObjectFactory.class
 })
@@ -33,8 +33,8 @@ public interface Calculadora {
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "subtrair", targetNamespace = "http://pos.ifpb.edu.br/", className = "br.edu.ifpb.pos.client.calculadora.Subtrair")
-    @ResponseWrapper(localName = "subtrairResponse", targetNamespace = "http://pos.ifpb.edu.br/", className = "br.edu.ifpb.pos.client.calculadora.SubtrairResponse")
+    @RequestWrapper(localName = "subtrair", targetNamespace = "http://ws.pos.ifpb.edu.br/", className = "br.edu.ifpb.pos.client.calculadora.Subtrair")
+    @ResponseWrapper(localName = "subtrairResponse", targetNamespace = "http://ws.pos.ifpb.edu.br/", className = "br.edu.ifpb.pos.client.calculadora.SubtrairResponse")
     public int subtrair(
         @WebParam(name = "arg0", targetNamespace = "")
         int arg0,
@@ -48,11 +48,11 @@ public interface Calculadora {
      * @return
      *     returns int
      */
-    @WebMethod
-    @WebResult(name = "retorno", targetNamespace = "")
-    @RequestWrapper(localName = "somarInteiros", targetNamespace = "http://pos.ifpb.edu.br/", className = "br.edu.ifpb.pos.client.calculadora.SomarInteiros")
-    @ResponseWrapper(localName = "somarInteirosResponse", targetNamespace = "http://pos.ifpb.edu.br/", className = "br.edu.ifpb.pos.client.calculadora.SomarInteirosResponse")
-    public int somarInteiros(
+    @WebMethod(operationName = "SomarNumeros")
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "SomarNumeros", targetNamespace = "http://ws.pos.ifpb.edu.br/", className = "br.edu.ifpb.pos.client.calculadora.SomarNumeros")
+    @ResponseWrapper(localName = "SomarNumerosResponse", targetNamespace = "http://ws.pos.ifpb.edu.br/", className = "br.edu.ifpb.pos.client.calculadora.SomarNumerosResponse")
+    public int somarNumeros(
         @WebParam(name = "primeiro", targetNamespace = "")
         int primeiro,
         @WebParam(name = "segundo", targetNamespace = "")
@@ -64,8 +64,8 @@ public interface Calculadora {
      */
     @WebMethod
     @Oneway
-    @RequestWrapper(localName = "numeros", targetNamespace = "http://pos.ifpb.edu.br/", className = "br.edu.ifpb.pos.client.calculadora.Numeros")
-    public void numeros(
+    @RequestWrapper(localName = "imprimirNumero", targetNamespace = "http://ws.pos.ifpb.edu.br/", className = "br.edu.ifpb.pos.client.calculadora.ImprimirNumero")
+    public void imprimirNumero(
         @WebParam(name = "arg0", targetNamespace = "")
         int arg0);
 

@@ -17,7 +17,7 @@ import javax.xml.ws.ResponseWrapper;
  * Generated source version: 2.1
  * 
  */
-@WebService(name = "ServicePessoa", targetNamespace = "http://pos.ifpb.edu.br/")
+@WebService(name = "ServicePessoa", targetNamespace = "http://ws.pos.ifpb.edu.br/")
 @XmlSeeAlso({
     ObjectFactory.class
 })
@@ -29,8 +29,8 @@ public interface ServicePessoa {
      * @param arg0
      */
     @WebMethod
-    @RequestWrapper(localName = "salvar", targetNamespace = "http://pos.ifpb.edu.br/", className = "br.edu.ifpb.pos.client.pessoa.Salvar")
-    @ResponseWrapper(localName = "salvarResponse", targetNamespace = "http://pos.ifpb.edu.br/", className = "br.edu.ifpb.pos.client.pessoa.SalvarResponse")
+    @RequestWrapper(localName = "salvar", targetNamespace = "http://ws.pos.ifpb.edu.br/", className = "br.edu.ifpb.pos.client.pessoa.Salvar")
+    @ResponseWrapper(localName = "salvarResponse", targetNamespace = "http://ws.pos.ifpb.edu.br/", className = "br.edu.ifpb.pos.client.pessoa.SalvarResponse")
     public void salvar(
         @WebParam(name = "arg0", targetNamespace = "")
         Pessoa arg0);
@@ -42,8 +42,8 @@ public interface ServicePessoa {
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "listarTodas", targetNamespace = "http://pos.ifpb.edu.br/", className = "br.edu.ifpb.pos.client.pessoa.ListarTodas")
-    @ResponseWrapper(localName = "listarTodasResponse", targetNamespace = "http://pos.ifpb.edu.br/", className = "br.edu.ifpb.pos.client.pessoa.ListarTodasResponse")
-    public List<Pessoa> listarTodas();
+    @RequestWrapper(localName = "todasAsPessoas", targetNamespace = "http://ws.pos.ifpb.edu.br/", className = "br.edu.ifpb.pos.client.pessoa.TodasAsPessoas")
+    @ResponseWrapper(localName = "todasAsPessoasResponse", targetNamespace = "http://ws.pos.ifpb.edu.br/", className = "br.edu.ifpb.pos.client.pessoa.TodasAsPessoasResponse")
+    public List<Pessoa> todasAsPessoas();
 
 }

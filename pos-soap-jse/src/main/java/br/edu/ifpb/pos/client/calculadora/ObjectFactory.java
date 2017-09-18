@@ -24,11 +24,11 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _Numeros_QNAME = new QName("http://pos.ifpb.edu.br/", "numeros");
-    private final static QName _SomarInteiros_QNAME = new QName("http://pos.ifpb.edu.br/", "somarInteiros");
-    private final static QName _SomarInteirosResponse_QNAME = new QName("http://pos.ifpb.edu.br/", "somarInteirosResponse");
-    private final static QName _Subtrair_QNAME = new QName("http://pos.ifpb.edu.br/", "subtrair");
-    private final static QName _SubtrairResponse_QNAME = new QName("http://pos.ifpb.edu.br/", "subtrairResponse");
+    private final static QName _ImprimirNumero_QNAME = new QName("http://ws.pos.ifpb.edu.br/", "imprimirNumero");
+    private final static QName _SomarNumeros_QNAME = new QName("http://ws.pos.ifpb.edu.br/", "SomarNumeros");
+    private final static QName _Subtrair_QNAME = new QName("http://ws.pos.ifpb.edu.br/", "subtrair");
+    private final static QName _SubtrairResponse_QNAME = new QName("http://ws.pos.ifpb.edu.br/", "subtrairResponse");
+    private final static QName _SomarNumerosResponse_QNAME = new QName("http://ws.pos.ifpb.edu.br/", "SomarNumerosResponse");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: br.edu.ifpb.pos.client.calculadora
@@ -38,27 +38,27 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link SomarInteirosResponse }
+     * Create an instance of {@link SomarNumerosResponse }
      * 
      */
-    public SomarInteirosResponse createSomarInteirosResponse() {
-        return new SomarInteirosResponse();
+    public SomarNumerosResponse createSomarNumerosResponse() {
+        return new SomarNumerosResponse();
     }
 
     /**
-     * Create an instance of {@link Numeros }
+     * Create an instance of {@link ImprimirNumero }
      * 
      */
-    public Numeros createNumeros() {
-        return new Numeros();
+    public ImprimirNumero createImprimirNumero() {
+        return new ImprimirNumero();
     }
 
     /**
-     * Create an instance of {@link SomarInteiros }
+     * Create an instance of {@link SomarNumeros }
      * 
      */
-    public SomarInteiros createSomarInteiros() {
-        return new SomarInteiros();
+    public SomarNumeros createSomarNumeros() {
+        return new SomarNumeros();
     }
 
     /**
@@ -78,37 +78,28 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Numeros }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ImprimirNumero }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pos.ifpb.edu.br/", name = "numeros")
-    public JAXBElement<Numeros> createNumeros(Numeros value) {
-        return new JAXBElement<Numeros>(_Numeros_QNAME, Numeros.class, null, value);
+    @XmlElementDecl(namespace = "http://ws.pos.ifpb.edu.br/", name = "imprimirNumero")
+    public JAXBElement<ImprimirNumero> createImprimirNumero(ImprimirNumero value) {
+        return new JAXBElement<ImprimirNumero>(_ImprimirNumero_QNAME, ImprimirNumero.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SomarInteiros }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link SomarNumeros }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pos.ifpb.edu.br/", name = "somarInteiros")
-    public JAXBElement<SomarInteiros> createSomarInteiros(SomarInteiros value) {
-        return new JAXBElement<SomarInteiros>(_SomarInteiros_QNAME, SomarInteiros.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SomarInteirosResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://pos.ifpb.edu.br/", name = "somarInteirosResponse")
-    public JAXBElement<SomarInteirosResponse> createSomarInteirosResponse(SomarInteirosResponse value) {
-        return new JAXBElement<SomarInteirosResponse>(_SomarInteirosResponse_QNAME, SomarInteirosResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://ws.pos.ifpb.edu.br/", name = "SomarNumeros")
+    public JAXBElement<SomarNumeros> createSomarNumeros(SomarNumeros value) {
+        return new JAXBElement<SomarNumeros>(_SomarNumeros_QNAME, SomarNumeros.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link Subtrair }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pos.ifpb.edu.br/", name = "subtrair")
+    @XmlElementDecl(namespace = "http://ws.pos.ifpb.edu.br/", name = "subtrair")
     public JAXBElement<Subtrair> createSubtrair(Subtrair value) {
         return new JAXBElement<Subtrair>(_Subtrair_QNAME, Subtrair.class, null, value);
     }
@@ -117,9 +108,18 @@ public class ObjectFactory {
      * Create an instance of {@link JAXBElement }{@code <}{@link SubtrairResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pos.ifpb.edu.br/", name = "subtrairResponse")
+    @XmlElementDecl(namespace = "http://ws.pos.ifpb.edu.br/", name = "subtrairResponse")
     public JAXBElement<SubtrairResponse> createSubtrairResponse(SubtrairResponse value) {
         return new JAXBElement<SubtrairResponse>(_SubtrairResponse_QNAME, SubtrairResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SomarNumerosResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.pos.ifpb.edu.br/", name = "SomarNumerosResponse")
+    public JAXBElement<SomarNumerosResponse> createSomarNumerosResponse(SomarNumerosResponse value) {
+        return new JAXBElement<SomarNumerosResponse>(_SomarNumerosResponse_QNAME, SomarNumerosResponse.class, null, value);
     }
 
 }

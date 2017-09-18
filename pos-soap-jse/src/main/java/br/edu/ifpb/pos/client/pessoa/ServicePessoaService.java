@@ -17,14 +17,14 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.1
  * 
  */
-@WebServiceClient(name = "ServicePessoaService", targetNamespace = "http://pos.ifpb.edu.br/", wsdlLocation = "http://localhost:8080/pos-soap-server/ServicePessoaService?wsdl")
+@WebServiceClient(name = "ServicePessoaService", targetNamespace = "http://ws.pos.ifpb.edu.br/", wsdlLocation = "http://localhost:8080/pos-soap-server/ServicePessoaService?wsdl")
 public class ServicePessoaService
     extends Service
 {
 
     private final static URL SERVICEPESSOASERVICE_WSDL_LOCATION;
     private final static WebServiceException SERVICEPESSOASERVICE_EXCEPTION;
-    private final static QName SERVICEPESSOASERVICE_QNAME = new QName("http://pos.ifpb.edu.br/", "ServicePessoaService");
+    private final static QName SERVICEPESSOASERVICE_QNAME = new QName("http://ws.pos.ifpb.edu.br/", "ServicePessoaService");
 
     static {
         URL url = null;
@@ -53,7 +53,7 @@ public class ServicePessoaService
      */
     @WebEndpoint(name = "ServicePessoaPort")
     public ServicePessoa getServicePessoaPort() {
-        return super.getPort(new QName("http://pos.ifpb.edu.br/", "ServicePessoaPort"), ServicePessoa.class);
+        return super.getPort(new QName("http://ws.pos.ifpb.edu.br/", "ServicePessoaPort"), ServicePessoa.class);
     }
 
     /**
@@ -65,7 +65,7 @@ public class ServicePessoaService
      */
     @WebEndpoint(name = "ServicePessoaPort")
     public ServicePessoa getServicePessoaPort(WebServiceFeature... features) {
-        return super.getPort(new QName("http://pos.ifpb.edu.br/", "ServicePessoaPort"), ServicePessoa.class, features);
+        return super.getPort(new QName("http://ws.pos.ifpb.edu.br/", "ServicePessoaPort"), ServicePessoa.class, features);
     }
 
     private static URL __getWsdlLocation() {
