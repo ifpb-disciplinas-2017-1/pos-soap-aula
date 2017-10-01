@@ -3,7 +3,6 @@ package br.edu.ifpb.pos.client.calculadora;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
@@ -17,7 +16,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="return" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="valorDeRetorno" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -28,27 +27,26 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "subtrairResponse", propOrder = {
-    "_return"
+    "valorDeRetorno"
 })
 public class SubtrairResponse {
 
-    @XmlElement(name = "return")
-    protected int _return;
+    protected int valorDeRetorno;
 
     /**
-     * Obtém o valor da propriedade return.
+     * Obtém o valor da propriedade valorDeRetorno.
      * 
      */
-    public int getReturn() {
-        return _return;
+    public int getValorDeRetorno() {
+        return valorDeRetorno;
     }
 
     /**
-     * Define o valor da propriedade return.
+     * Define o valor da propriedade valorDeRetorno.
      * 
      */
-    public void setReturn(int value) {
-        this._return = value;
+    public void setValorDeRetorno(int value) {
+        this.valorDeRetorno = value;
     }
 
 }

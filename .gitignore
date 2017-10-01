@@ -1,4 +1,7 @@
 /target/
 .DS_Store
 **/target/
-pos-soap-server/nb-configuration.xml
+/pos-soap-server/nb-configuration.xml
+/pos-soap-jse/target/
+/pos-soap-node/node_modules/
+/pos-soap-jse/src/main/java/br/edu/ifpb/pos/client/

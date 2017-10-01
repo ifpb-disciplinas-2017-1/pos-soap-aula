@@ -24,6 +24,7 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
+    private final static QName _Pessoa_QNAME = new QName("http://ws.pos.ifpb.edu.br/", "pessoa");
     private final static QName _Salvar_QNAME = new QName("http://ws.pos.ifpb.edu.br/", "salvar");
     private final static QName _TodasAsPessoas_QNAME = new QName("http://ws.pos.ifpb.edu.br/", "todasAsPessoas");
     private final static QName _TodasAsPessoasResponse_QNAME = new QName("http://ws.pos.ifpb.edu.br/", "todasAsPessoasResponse");
@@ -34,6 +35,14 @@ public class ObjectFactory {
      * 
      */
     public ObjectFactory() {
+    }
+
+    /**
+     * Create an instance of {@link Pessoa }
+     * 
+     */
+    public Pessoa createPessoa() {
+        return new Pessoa();
     }
 
     /**
@@ -69,11 +78,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Pessoa }
+     * Create an instance of {@link JAXBElement }{@code <}{@link Pessoa }{@code >}}
      * 
      */
-    public Pessoa createPessoa() {
-        return new Pessoa();
+    @XmlElementDecl(namespace = "http://ws.pos.ifpb.edu.br/", name = "pessoa")
+    public JAXBElement<Pessoa> createPessoa(Pessoa value) {
+        return new JAXBElement<Pessoa>(_Pessoa_QNAME, Pessoa.class, null, value);
     }
 
     /**

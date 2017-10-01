@@ -3,11 +3,12 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>br.edu.ifpb</groupId>
     <artifactId>pos-soap</artifactId>
-    <version>0.1-SNAPSHOT</version>
+    <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
         <module>pos-soap-jse</module>
         <module>pos-soap-server</module>
+        <module>pos-soap-node</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

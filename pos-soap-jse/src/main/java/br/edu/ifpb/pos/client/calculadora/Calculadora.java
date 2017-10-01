@@ -26,20 +26,14 @@ public interface Calculadora {
 
     /**
      * 
-     * @param arg1
      * @param arg0
-     * @return
-     *     returns int
      */
     @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "subtrair", targetNamespace = "http://ws.pos.ifpb.edu.br/", className = "br.edu.ifpb.pos.client.calculadora.Subtrair")
-    @ResponseWrapper(localName = "subtrairResponse", targetNamespace = "http://ws.pos.ifpb.edu.br/", className = "br.edu.ifpb.pos.client.calculadora.SubtrairResponse")
-    public int subtrair(
+    @Oneway
+    @RequestWrapper(localName = "imprimirNumero", targetNamespace = "http://ws.pos.ifpb.edu.br/", className = "br.edu.ifpb.pos.client.calculadora.ImprimirNumero")
+    public void imprimirNumero(
         @WebParam(name = "arg0", targetNamespace = "")
-        int arg0,
-        @WebParam(name = "arg1", targetNamespace = "")
-        int arg1);
+        int arg0);
 
     /**
      * 
@@ -60,13 +54,19 @@ public interface Calculadora {
 
     /**
      * 
+     * @param arg1
      * @param arg0
+     * @return
+     *     returns int
      */
     @WebMethod
-    @Oneway
-    @RequestWrapper(localName = "imprimirNumero", targetNamespace = "http://ws.pos.ifpb.edu.br/", className = "br.edu.ifpb.pos.client.calculadora.ImprimirNumero")
-    public void imprimirNumero(
+    @WebResult(name = "valorDeRetorno", targetNamespace = "")
+    @RequestWrapper(localName = "subtrair", targetNamespace = "http://ws.pos.ifpb.edu.br/", className = "br.edu.ifpb.pos.client.calculadora.Subtrair")
+    @ResponseWrapper(localName = "subtrairResponse", targetNamespace = "http://ws.pos.ifpb.edu.br/", className = "br.edu.ifpb.pos.client.calculadora.SubtrairResponse")
+    public int subtrair(
         @WebParam(name = "arg0", targetNamespace = "")
-        int arg0);
+        int arg0,
+        @WebParam(name = "arg1", targetNamespace = "")
+        int arg1);
 
 }

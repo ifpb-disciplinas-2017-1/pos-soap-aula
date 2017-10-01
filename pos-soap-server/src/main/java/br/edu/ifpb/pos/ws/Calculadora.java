@@ -3,6 +3,7 @@ package br.edu.ifpb.pos.ws;
 import javax.jws.Oneway;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
+import javax.jws.WebResult;
 import javax.jws.WebService;
 
 /**
@@ -20,6 +21,7 @@ public class Calculadora {
         return a + b;
     }
 
+    @WebResult(name = "valorDeRetorno")
     public int subtrair(int a, int b) {
         return a - b;
     }
